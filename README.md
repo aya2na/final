@@ -3,4 +3,4 @@
 クラス　　：SD2B
 氏名　　　：中村　綾那
 システム名：図書システム
-ＵＲＬ　　：
+ＵＲＬ　　：https://aso2201167.sub.jp/php2/web/index.php
