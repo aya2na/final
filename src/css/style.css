@@ -1,23 +1,153 @@
+/* ヘッダー */
 .header-menu{
     background-color: #ffdd57;
+    position: fixed;
+    /* top: 0; */
+    right: 0;
+    left: 0;
+    z-index: 5;
 }
+/* フッター */
 .footer-menu{
     background-color: #ffdd57;
     position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 5;
 }
-.bth-humberger{
-    width: 56px;
-    height: 56px;
-    background: transparent;
+
+/* スライドショー */
+.body {
     position: relative;
+    top: 40px;
+    background: #444;
 }
-.bth-humberger > div{
-    position: absolute;
-    width: 56px;
-    height: 3px;
-    transition: all 0.2s;
-    background-color: #000;
+.slideshow {
+    width: 600px;
+    margin: auto;
+} 
+/* .slideshow img {
+    width: 100px;
+} */
+
+/* ボタン */
+button{
+    position: relative;
+    top: 40px;
+    width: 200px;
+    height: 100px;
+    background-color: #ffdd57;
+}
+.btn{
+    display: block;
+    margin: auto;
+}
+.mng{
+    display:inline-block;
+    padding:10px 30px;
+    text-align:center;
+    color:#FFF;
+    margin:5px;
+    border:1px solid;
+    cursor:pointer;
+}
+.log{
+    display:inline-block;
+    padding:10px 30px;
+    text-align:center;
+    color:#FFF;
+    margin:5px;
+    border:1px solid;
+    cursor:pointer;
+}
+.sign{
+    display:inline-block;
+    padding:10px 30px;
+    text-align:center;
+    color:#FFF;
+    margin:5px;
+    border:1px solid;
+    cursor:pointer;
+}
+
+/* カレンダー画像 */
+.schedule{
+    width: 800px;
+    height: 800px;
+    /* text-align: center; */
+}
+
+/* ドロップダウンのサイズ */
+.schedules{
+    /* 画面に応じたサイズ */
+    position: relative;
+    top:50px;
+    width: 200px;
+    height: 30px;
+}
+
+/* イベント情報の画像サイズと場所 */
+.event{
+    display: flex;
+}
+.event img{
+    position: relative;
+    top: 40px;
+    margin: 20px;
+    width: 300px;
+    height: 450px;
+}
+
+/* おすすめ図書の画像サイズと場所 */
+.recommend{
+    display: flex;
+}
+/* .re{
+
+} */
+.re img{
+    position: relative;
+    top: 40px;
+    margin: 20px;
+    width: 200px;
+    height: 250px;
+}
+
+/* 検索 */
+/* 検索の画像サイズと場所 */
+.all{
+    display: flex;
+    flex-wrap: wrap;
+}
+.all img{
+    position: relative;
+    top: 70px;
+    margin: 20px;
+    width: 200px;
+    height: 250px;
+}
+/* 部分検索フォーム */
+.part{
+    position: relative;
+    top: 50px;
+    width: fit-content;
+    margin: auto;
+}
+.form{
+    top:50px;
+    width: 200px;
+    height: 30px;
+}
+.submit{
+    margin: 20px;
+    text-align: center;
+}
+
+/* 検索結果のメッセージ */
+.mg{
+    position: relative;
+    top: 40px;
+    width: fit-content;
+    margin: auto;
 }

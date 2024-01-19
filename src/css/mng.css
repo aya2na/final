@@ -1,0 +1,99 @@
+h1{
+    text-align: center;
+    background-color: #ffdd57;
+}
+
+/* ボタン */
+button{
+    width: 70px; 
+    height: 50px;
+    background-color: #ffdd57;
+}
+.btn{
+    display: flex;
+    text-align:center;
+    color:#FFF;
+}
+
+/* ログインフォーム */
+.logform{
+    top: 50px;
+    width: fit-content;
+    margin: auto;
+    background-color: #ffdd57c7;
+}
+
+/* リンク */
+.a{
+    text-align: center;
+}
+
+/* 送信ボタン */
+.submit{
+    margin: 20px;
+    text-align: center;
+}
+/* 送信ボタン(更新・削除) */
+.sub{
+    top: 100%;
+    text-align: center;
+}
+/* テーブル */
+.tbl{
+    display: flex;
+}
+table{
+    /* display: flex; */
+    margin: 20px;
+    /* padding: 20px; */
+    text-align: center;
+}
+/* テーブルヘッダーの色 */
+.li th{
+    background-color: #00a381;
+}
+.ca th{
+    background-color: #00a381;
+}
+
+/* ドロップダウンのサイズ */
+.insert select{
+    width: 200px;
+    height: 30px;
+}
+.update select{
+    width: 200px;
+    height: 30px;
+}
+
+/* 追加のフォーム場所*/
+.insert{
+    top: 50px;
+    width: fit-content;
+    margin: auto;
+}
+/* 更新のフォーム場所 */
+.update{
+    top: 50px;
+    width: fit-content;
+    margin: auto;
+}
+/* フォームサイズ */
+.form{
+    width: 200px; 
+    height: 30px;
+}
+
+/* 削除、更新のテーブル */
+.te{
+ margin: auto;
+}
+
+/* 編集成功したときのメッセージ */
+.ok{
+    text-align: center;
+}
+
+.ng{
+    text-align: center;
+}

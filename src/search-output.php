@@ -1,4 +1,5 @@
 <?php 'header.php'; ?>
+<?php require 'db-connect.php';?>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -17,28 +18,25 @@
 <!-- </header> -->
 <!-- メイン -->
     <?php
-        echo '<div class="btn">';
-            // ログイン画面
-            echo '<div class="log">';
-            echo '<form action="login-input.php" method="post">';
-            echo '<button>ログイン画面</button>';
-            echo '</form>';
-            echo '</div>';
-
-            // 新規登録画面
-            echo '<div class="sign">';
-            echo '<form action="signin-input.php" method="post">';
-            echo '<button>新規登録画面</button>';
-            echo '</form>';
-            echo '</div>';
-
-            //管理者画面
-            echo '<div class="mng">';
-            echo '<form action="management-input.php" method="post">';
-            echo '<button>管理者画面</button>';
-            echo '</form>';
+    $pdo=new PDO($connect,USER,PASS);
+    echo '<p class="mg">検索結果です。</p>';
+    // var_dump($_POST['id']);
+    $sql=$pdo->prepare('select * from library where library_name like ? and author_name like ?');
+    $sql->execute(['%'.$_POST['library_name'].'%','%'.$_POST['author_name'].'%',]);
+    $count = $sql->rowCount();
+    if($count > 0){
+        echo '<p class="mg">該当の図書が見つかりました。';
+        echo '<div class="search">';
+            echo '<div class="all">';
+                foreach ($sql as $row) {
+                    $url=$row['img_url'];
+                    echo '<img src="img/', $url, '"></img>';
+                }
             echo '</div>';
         echo '</div>';
+    }else{
+        echo '<p class="mg">該当の図書がありません。';
+    }
     ?>
 <!-- フッター -->
     <div id="footer">
@@ -51,4 +49,5 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
 <script src="./script/header.js"></script>
 <script src="./script/footer.js"></script>
+<script src="./script/search.js"></script>
 <?php 'footer.php';?>

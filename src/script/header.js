@@ -3,12 +3,12 @@ new Vue({
     data(){
         return{
             lists:[
-                {label:'TOP',path:'index.php'},
-                {label:'SCHEDULE',path:'schedule.php'},
-                {label:'EVENT',path:'event.php'},
-                {label:'RECOMMEND',path:'recommend.php'},
-                {label:'SEARCH',path:'search.php'},
-                {label:'MY PAGE',path:'mypage.php'}
+                {label:'トップページ',path:'index.php'},
+                {label:'開館情報',path:'schedule.php'},
+                {label:'イベント',path:'event.php'},
+                {label:'おすすめ図書',path:'recommend.php'},
+                {label:'図書検索',path:'search.php'},
+                {label:'マイページ',path:'mypage.php'}
             ]
         };
     }
